@@ -28,3 +28,19 @@ clickme.addEventListener("click",function() {
 alert("You clicked me!");
 
 });
+
+//random color
+
+function getRandomcolor(){
+
+const r = Math.floor(Math.random() * 256); //value for red
+const g = Math.floor(Math.random() * 256); // value for green
+const b = Math.floor(Math.random() * 256); //value for blue
+return `rgb(${r}, ${g}, ${b})`;
+}
+
+const randomColorBtn = document.getElementById("randomColorBtn");
+randomColorBtn.addEventListener("click", function(){
+
+    document.body.style.backgroundColor = getRandomColor();
+});
