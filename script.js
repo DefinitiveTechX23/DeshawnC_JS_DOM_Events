@@ -45,8 +45,14 @@ randomColorBtn.addEventListener("click", function(){
     document.body.style.backgroundColor = getRandomColor();
 });
 
-function changeBtnStyle() {
-    const btn = document.querySelector(".cool-btn")
-    btn.classList.toggle("glow"); // Toggles glow effect
-   }
-   
+let button = document.querySelector("#modeToggleBtn");
+
+button.addEventListener("click", function() {
+    if (document.body.classList.contains("dark mode")) {
+        document.body.classList.remove("dark mode");
+        button.innerText = "Dark Mode";
+    } else {
+        document.body.classList.add("dark mode");
+        button.innerText = "Light Mode";
+    }
+});
